@@ -48,5 +48,8 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run cache:coin-ids
+bun run cache:coin-data
+bun run cache:asset-platforms
+bun run cache:exchanges
 ```

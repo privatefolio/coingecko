@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "start": "serve -p 8080 -C public",
-    "cache:coin-data": "bun src/cache-coin-data.ts",
     "cache:coin-ids": "bun src/cache-coin-ids.ts",
+    "cache:coin-data": "bun src/cache-coin-data.ts",
     "cache:asset-platforms": "bun src/cache-asset-platforms.ts",
     "cache:exchanges": "bun src/cache-exchanges.ts"
   },
