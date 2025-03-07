@@ -1,0 +1,1 @@
+massa-bridged-usdt-massa
