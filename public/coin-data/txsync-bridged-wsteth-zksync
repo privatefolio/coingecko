@@ -1,0 +1,6 @@
+{
+  "id": "txsync-bridged-wsteth-zksync",
+  "image": "https://coin-images.coingecko.com/coins/images/53019/large/steth.png?1734998126",
+  "name": "txSync Bridged wstETH (zkSync)",
+  "symbol": "wsteth"
+}

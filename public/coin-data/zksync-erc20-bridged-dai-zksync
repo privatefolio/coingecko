@@ -1,0 +1,6 @@
+{
+  "id": "zksync-erc20-bridged-dai-zksync",
+  "image": "https://coin-images.coingecko.com/coins/images/39805/large/dai.png?1724126260",
+  "name": "ZKsync ERC20 Bridged DAI (zkSync)",
+  "symbol": "dai"
+}
