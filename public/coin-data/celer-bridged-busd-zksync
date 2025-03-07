@@ -1,0 +1,6 @@
+{
+  "id": "celer-bridged-busd-zksync",
+  "image": "missing_large.png",
+  "name": "Celer Bridged BUSD (zkSync)",
+  "symbol": "busd"
+}

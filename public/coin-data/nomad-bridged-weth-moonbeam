@@ -1,0 +1,6 @@
+{
+  "id": "nomad-bridged-weth-moonbeam",
+  "image": "https://coin-images.coingecko.com/coins/images/39720/large/WETH.PNG?1723732514",
+  "name": "Nomad Bridged WETH (Moonbeam)",
+  "symbol": "weth"
+}
