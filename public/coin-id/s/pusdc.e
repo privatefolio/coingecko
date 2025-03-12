@@ -1,1 +1,0 @@
-pooltogether-prize-usdc

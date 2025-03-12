@@ -1,1 +1,0 @@
-vanry-bridged-usdc-vanry

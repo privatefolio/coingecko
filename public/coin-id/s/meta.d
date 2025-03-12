@@ -1,1 +1,0 @@
-dinari-meta-dshare

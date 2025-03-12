@@ -1,1 +1,0 @@
-free-bridged-solvbtc-m-core
