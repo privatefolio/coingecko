@@ -34,10 +34,18 @@ async function main() {
     page += 1
   }
 
+  records.sort((a, b) => a.id.toLowerCase().localeCompare(b.id.toLowerCase()))
+
   await writeFile(
     `${destination}/all.json`,
     JSON.stringify(records, null, 2)
   )
+
+  await writeFile(
+    `${destination}/count`,
+    records.length.toString()
+  )
+
   console.log(`All records written to ${destination}/all.json`)
 
   return "Success"

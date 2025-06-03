@@ -8,11 +8,11 @@ export interface CoingeckoExchange {
   description: string;                          // exchange description
   url: string;                                  // exchange website url
   image: string;                                // exchange image url
-  has_trading_incentive: boolean;               // exchange trading incentive
+  // has_trading_incentive: boolean;               // exchange trading incentive
   trust_score: number;                          // exchange trust score
   trust_score_rank: number;                     // exchange trust score rank
-  trade_volume_24h_btc: number;                 // exchange trade volume in BTC in 24 hours
-  trade_volume_24h_btc_normalized: number;      // normalized trading volume by traffic in BTC in 24 hours
+  // trade_volume_24h_btc: number;                 // exchange trade volume in BTC in 24 hours
+  // trade_volume_24h_btc_normalized: number;      // normalized trading volume by traffic in BTC in 24 hours
 }
 export type CoingeckoAssetPlatformId = string
 

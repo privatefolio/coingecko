@@ -25,7 +25,17 @@ async function main() {
     const list: CoingeckoExchange[] = await res.json()
     console.log(`Page ${page} fetched. Records: ${list.length}`)
 
-    records.push(...list.map((x, index) => ({ index: index + (page - 1) * PAGE_SIZE, ...x })))
+    records.push(...list.map((x) => ({ 
+      id: x.id,
+      name: x.name,
+      country: x.country,
+      year_established: x.year_established,
+      description: x.description,
+      url: x.url,
+      image: x.image,
+      trust_score: x.trust_score,
+      trust_score_rank: x.trust_score_rank,
+     })))
 
     if (list.length < PAGE_SIZE) {
       break
@@ -34,10 +44,18 @@ async function main() {
     page += 1
   }
 
+  records.sort((a, b) => a.id.toLowerCase().localeCompare(b.id.toLowerCase()))
+
   await writeFile(
     `${destination}/all.json`,
     JSON.stringify(records, null, 2)
   )
+
+  await writeFile(
+    `${destination}/count`,
+    records.length.toString()
+  )
+
   console.log(`All records written to ${destination}/all.json`)
 
   return "Success"

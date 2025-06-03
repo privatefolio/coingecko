@@ -28,11 +28,20 @@ async function main() {
   await mkdir(symbolsDestination, { recursive: true })
   await mkdir(assetPlatformsDestination, { recursive: true })
 
-  const records = list.map((x, index) => ({ index, ...x }))
+  const records = list //.map((x, index) => ({ index, ...x }))
+
+  records.sort((a, b) => a.id.toLowerCase().localeCompare(b.id.toLowerCase()))
+
   await writeFile(
     `${destination}/all.json`,
     JSON.stringify(records, null, 2)
   )
+
+  await writeFile(
+    `${destination}/count`,
+    list.length.toString()
+  )
+
   console.log(`All records ${list.length} written to ${destination}/all.json`)
 
   console.log(`Writing links: symbols -> geckoId, asset platforms -> geckoId`)
