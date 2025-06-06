@@ -2,13 +2,16 @@ import { mkdir, writeFile } from "fs/promises"
 import { join } from "path"
 
 import { COINGECKO_BASE_API, DATA_FOLDER } from "./settings"
-import type { CoingeckoCoin } from "./interfaces"
+import type { RawCoingeckoCoin } from "./interfaces"
 
 // https://docs.coingecko.com/reference/coins-list
 const API_ENDPOINT = "coins/list"
 
 const DESTINATION_DIR = `./${DATA_FOLDER}/coin-id`
 
+/**
+ * @deprecated
+ */
 async function main() {
   const params = new URLSearchParams({
     include_platform: "true",
@@ -18,7 +21,7 @@ async function main() {
   console.log("URL:", URL);
 
   const response = await fetch(URL)
-  const list: CoingeckoCoin[] = await response.json()
+  const list: RawCoingeckoCoin[] = await response.json()
 
   const destination = join(process.cwd(), DESTINATION_DIR)
   const symbolsDestination = `${destination}/s`
@@ -51,7 +54,7 @@ async function main() {
     if (!acc[symbol]) acc[symbol] = []
     acc[symbol].push(record)
     return acc
-  }, {} as Record<string, CoingeckoCoin[]>)
+  }, {} as Record<string, RawCoingeckoCoin[]>)
 
 
   for (const coin of list) {

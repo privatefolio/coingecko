@@ -15,6 +15,9 @@ export async function sleep(interval: number) {
   return new Promise((resolve) => setTimeout(resolve, interval))
 }
 
+/**
+ * @deprecated
+ */
 async function main() {
   if (!API_KEY) throw new Error("Env COINGECKO_API_KEY is required")
 
